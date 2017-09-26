@@ -2170,6 +2170,13 @@ void sirius_use_internal_mixer(int32_t* use_internal_mixer__)
     *use_internal_mixer__ = (sim_ctx->mixer_input().exist_) ? 1 : 0;
 }
 
+void sirius_get_iterative_solver_lapw(int32_t* kset_id__, int32_t* ik__, int32_t* nfv__, int32_t* ngk__, int32_t* gvec_of_k__,
+                           double_complex* fv_states__, int32_t* ld__)
+{
+    auto kset = kset_list[*kset_id__];
+    auto kp = (*kset)[*ik__ - 1];
+}
+
 void sirius_set_iterative_solver_tolerance(double* tol__)
 {
     /* convert tolerance to Ha */

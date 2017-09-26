@@ -560,6 +560,11 @@ module sirius
             integer,                 intent(out) :: flag
         end subroutine
 
+        subroutine sirius_get_iterative_solver_lapw(kset_id, ik, nfv, ngk, gvec_of_k, fv_states, ld)&
+            &bind(C, name="sirius_set_iterative_solver_tolerance")
+            real(8),                 intent(in) :: tol
+        end subroutine
+
         subroutine sirius_set_iterative_solver_tolerance(tol)&
             &bind(C, name="sirius_set_iterative_solver_tolerance")
             real(8),                 intent(in) :: tol
